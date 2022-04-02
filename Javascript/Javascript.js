@@ -74,42 +74,42 @@
 // document.writeln(" Ind = " + a + " Aus = " + b + " SA = " + c);
 
 
-var array = [5,2,7,9,15,81,11];
-var a=0, b=0, c=0, x=1, y=0, z=0;
-function secondMaximum()
-{
+// var array = [5,2,7,9,15,81,11];
+// var a=0, b=0, c=0, x=1, y=0, z=0;
+// function secondMaximum()
+// {
 
-for ( i = 0; i < array.length - 1; i++)
-{
-     if (array[i] > a)
-          {a = array[i]; 
-               if (a>b)
-                      { c=b;
-                         b=a;
-                         a=c;}
-               }
-}}
+// for ( i = 0; i < array.length - 1; i++)
+// {
+//      if (array[i] > a)
+//           {a = array[i]; 
+//                if (a>b)
+//                       { c=b;
+//                          b=a;
+//                          a=c;}
+//                }
+// }}
 
 
-function secondMinimum()
-{
+// function secondMinimum()
+// {
 
-for ( i = 0; i < array.length - 1; i++)
-{
-     if (array[i] < x)
-          {x = array[i];
-               document.writeln(x);
+// for ( i = 0; i < array.length - 1; i++)
+// {
+//      if (array[i] < x)
+//           {x = array[i];
+//                document.writeln(x);
 
-                 if (x<y)
-                      { z=y;
-                         y=x;
-                         x=z;}
-               }
-}}
-secondMaximum(array);
-document.writeln("The Second Maximum Number from the Array is : " + c + "<br>");
-secondMinimum(array);
-document.writeln("The Second Minimum Number from the Array is : " + x);
+//                  if (x<y)
+//                       { z=y;
+//                          y=x;
+//                          x=z;}
+//                }
+// }}
+// secondMaximum(array);
+// document.writeln("The Second Maximum Number from the Array is : " + c + "<br>");
+// secondMinimum(array);
+// document.writeln("The Second Minimum Number from the Array is : " + x);
 
 
 // function Validate()
@@ -149,3 +149,23 @@ document.writeln("The Second Minimum Number from the Array is : " + x);
 //          $("ol").append("<li><b>Newly added appended item</b></li>");  
 //      });  
 //  });  
+
+
+$(document).ready(function(){  
+$('.circle').click(function()
+    {
+        var classes = ['bg-primary' , 'bg-success' , 'bg-danger' , 'bg-info' , 'bg-warning'];
+       for(i =0; i < classes.length; i++)
+        {
+            if($(this).hasClass(classes[i]) == true)
+            {
+                $('body').addClass(classes[i]);
+                classes.splice(i , 1);
+                console.log(classes)
+                classes.forEach(e=>{
+                    $('body').removeClass(e)
+                })
+            }
+        }
+    })
+})
