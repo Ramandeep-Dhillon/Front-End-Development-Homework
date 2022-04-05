@@ -1,5 +1,5 @@
 import ShoppingList from "./ShoppingList";
-function shoppingapp(props){
+function ShoppingApp(props){
     return(
         <div>
             <shoppinglist items = {['Fruits','apple', 'banana', 'orange', 'kiwi']}/>
@@ -7,4 +7,4 @@ function shoppingapp(props){
     )
 }
 
-export default shoppingapp
+export default ShoppingApp

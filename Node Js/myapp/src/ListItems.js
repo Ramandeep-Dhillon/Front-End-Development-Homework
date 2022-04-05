@@ -1,8 +1,8 @@
-function Listitem(){
+function Listitem(props){
     return(
         <div>
             <ol>
-                <li>{ShoppingList.props}</li>
+                <li>{props.item}</li>
                 
             </ol>
         </div>

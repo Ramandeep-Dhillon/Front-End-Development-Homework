@@ -48,5 +48,28 @@ $(document).ready(function()
     
     // FAQ's Toggle End
 
+    
 
 });
+
+function search()
+    {
+        var input = $('#search').val();
+        var num = $('#number').val();
+        
+
+        $.get('https://api.giphy.com/v1/gifs/search?api_key=dql6uBKpPjmAnC7KvnhxlmjKIlc1qa7a&q='+ input +'&limit=' + num + '&lang=en', function(response)
+        {
+          const ch = document.getElementById("result");
+          ch.textContent = ' ';
+          console.log(response);
+          for(let i=0; i<=response.data.length; i++)
+          
+            {
+              
+              document.getElementById("result").innerHTML += "<div class=\"card col-lg-4 col-md-6 col-sm-12\"><img src = \"" + response.data[i].images.downsized_large.url + "\"class=\"img-fluid\"><div class=\"card-body\"><p class=\"card-title\">" + response.data[i].title + "</p>";
+              
+            }
+                        
+        });
+    }

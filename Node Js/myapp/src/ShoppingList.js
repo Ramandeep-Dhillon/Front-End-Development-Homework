@@ -1,13 +1,16 @@
 import Listitem from "./ListItems"
 function ShoppingList(props){
     return(
+        <div>
 
-        <><Listitem items={props.items[0]} /><ol>
-            <Listitem items={props.items[1]} />
-            <Listitem items={props.items[2]} />
-            <Listitem items={props.items[3]} />
-            <Listitem items={props.items[4]} />
-        </ol></>
+            <Listitem item={props.items[0]} />
+        <ol>
+            <Listitem item={props.items[1]} />
+            <Listitem item={props.items[2]} />
+            <Listitem item={props.items[3]} />
+            <Listitem item={props.items[4]} />
+        </ol>
+        </div>
     )
 
 }

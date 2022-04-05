@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,7 @@
     <title>GIPHY search</title>
 </head>
 <body>
+  
 
     <div class="container">
 
@@ -39,13 +40,31 @@
           </nav>
           <!--Navigation Bar End-->
     
-          
+          <div class="container-fluid my-4 col-md-6 text-center" style="align-content: center;">
+
+                <div class="container-fluid col-md-6 col-sm-6">
+
+                    <img src="Images/Logo.gif" alt="Logo" class="img-fluid">
+
+                </div>
+
+                <input type="text" class="mt-3 col-md-12 col-sm-12" id="search" placeholder="Search Your GIPHY here..">
+                <input type="number" class="my-3 col-md-12 col-sm-12" id="number" placeholder="Number of GIPHY you want">
+
+                <input type="button" onclick = "search()" style="align-content: center;" value="Search Now" class="btn btn-primary my-3 col-md-4" id="btn">
+
+          </div>
+
+          <br><br>
+
+        
+
+          <div class="container row my-3" id="result">
 
 
+          </div>
 
-
-
-    </div>
+    </div> 
 
 
     
