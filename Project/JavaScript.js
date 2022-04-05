@@ -52,6 +52,8 @@ $(document).ready(function()
 
 });
 
+// adding images to the index page using bootstrap card start
+
 function search()
     {
         var input = $('#search').val();
@@ -73,3 +75,4 @@ function search()
                         
         });
     }
+// adding images to the index page using bootstrap card End
